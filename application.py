@@ -2,15 +2,15 @@ from flask import Flask
 from flask import jsonify
 import numpy as np
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/')
+@application.route('/')
 def hello():
     return "Hello Stefan"
 
 
-@app.route('/random/<n>')
+@application.route('/random/<n>')
 def randomvals(n):
 
     try:
@@ -27,4 +27,4 @@ def randomvals(n):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)
